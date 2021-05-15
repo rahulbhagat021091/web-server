@@ -11,7 +11,7 @@ var middlewear = {
 		console.log('Request: ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
 		next();
 	}
-};
+}; 
 
 app.use(middlewear.logger);	 
 
@@ -20,7 +20,7 @@ app.use(middlewear.logger);
 // });
 
 app.get('/about', middlewear.requireAuthentication, function(req, res)	{
-	res.send('About Us');
+	res.send('About Us!');  
 });
 	//console.log(__dirname);
 app.use(express.static(__dirname + '/public'));
